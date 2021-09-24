@@ -1,9 +1,23 @@
-body* {
+#body {
     display: grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: 'frame1 frame2 frame3' 'frame4 main frame5' 'frame6 frame7 frame8';
+    grid-gap: 5px;
+    background-color: black;
 }
 
-main {
-    grid
+#frame {
+    padding: 5px;
+    margin: 5px;
+    border: 5px;
+}
+
+#main {
+    display: grid;
+    grid-template: 4/5;
+    align-items: center;
+    grid-column: 2/span 2;
+    grid-row: 2/span 2;
+    grid-template-areas: 'reset' 'reel1 reel2 reel3 lever' 'betup' 'betdown' 'credits betpool';
 }
