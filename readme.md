@@ -1,5 +1,5 @@
 #GA-SEI-Project-1-Slot-Machine
-- General Assembly - Software Engineering Immersive - Project 1 -
+* General Assembly * Software Engineering Immersive * Project 1 *
 
 **SLOT MACHINE - PSEUDOCODE**
 
@@ -11,7 +11,8 @@ _2. Define variables to track the game state:_\
   2.1. The player "wallet."\
   2.2. The readouts of the slot machine reels.\
   2.3. The amount wagered from the wallet.\
-  (ICEBOX 2.4. The number of rounds played.)
+  2.4. The current wallet amount remaining.\
+  (ICEBOX 2.5. The number of rounds played.)
 
 _3. Create cache elements:_\
   3.1. All three reels.\
