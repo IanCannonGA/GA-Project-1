@@ -12,7 +12,8 @@
 #topline {
     display: grid;
     grid-template-areas: 'empty1 banner reset';
-    justify-items: stretch;
+    padding: 20px;
+    justify-content: space-between;
 }
 
 #banner {
@@ -20,45 +21,58 @@
 }
 
 #reset {
-    color: grey;
+    height: 50px;
+    width: 100px;
+    display: grid;
+    justify-content: center space-around;
+    align-content: center;
+    color: darkred;
     background: black;
 }
 
 #reels-lever {
     display: grid;
-    grid-template-areas: 'empty2 reel1 reel2 reel3  lever';
-}
-
-#reel #reel2 #reel3 {
-    height: 100px;
-    width: 50px;
-    text: bold;
-    border-radius: 10%;
-    border: 2px solid gold;
-    margin: 2px solid gold;
-    padding: 2px solid gold;
+    grid-template-areas: 'empty2 reel1 reel2 reel3 lever';
+    justify-content: space-around;
+    align-content: center;
 }
 
 #lever {
-    background: goldenrod;
-    color: gold;
+    height: 180px;
+    width: 130px;
+    border-radius: 5%;
+    padding: 5px;
+    border: 5px solid silver;
+}
+
+#lever:hover {
+    size: 105%;
+}
+
+#lever:active {
+    size: 95%;
 }
 
 #money {
-    color: silver;
     display: grid;
-    grid-template-areas: 'empty3 credits betpool empty4';
-}
-
-#credits #betpool {
+    grid-template-areas: 'credits wager';
+    justify-content: left space-evenly;
+    margin: 0px 100px;
+    border-radius: 2.5%;
+    border: 5px solid silver;
+    padding: 0px 25px;
+    background: black;
+    color: silver;
     text: bold;
     color: green;
     background-color: black;
 }
 
 #betting {
+    padding: 20px;
     display: grid;
-    grid-template-areas: 'empty5 betup betdown empty6';
+    grid-template-areas: 'empty4 betdown empty5 betup empty6';
+    justify-content: space-around;
 }
 
 #betup #betdown {}
