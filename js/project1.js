@@ -13,9 +13,11 @@ const credDisp = document.getElementById('credits');
 const betDisp = document.getElementById('betpool');
 
 /*----- event listeners -----*/
-document.getElementById('betup').addEventListener('click', betUp())
-document.getElementById('betdown').addEventListener('click', betDown())
-document.getElementById('lever').addEventListener('click', leverPull())
+document.getElementById('betup').addEventListener('click', betUp());
+document.getElementById('betdown').addEventListener('click', betDown());
+document.getElementById('lever').addEventListener('click', leverPull());
+document.getElementById('reset').addEventListener('click', reset());
+
 
 
 /*----- functions -----*/
@@ -26,13 +28,17 @@ function init() {
 }
 
 function betUp() {
-    console.log('betUp clicked!')
+    console.log('betUp clicked!');
 }
 
 function betDown() {
-    console.log('betDown clicked!')
+    console.log('betDown clicked!');
 }
 
 function leverPull() {
-    console.log('leverPull clicked!')
+    console.log('leverPull clicked!');
+}
+
+function reset() {
+    console.log('reset clicked!');
 }
