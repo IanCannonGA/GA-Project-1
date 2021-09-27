@@ -14,7 +14,7 @@ const betDisp = document.getElementById('w-amount');
 
 /*----- event listeners -----*/
 const bUpLis = document.getElementById('betup').addEventListener('click', betUp);
-const bDnLis = document.getElementById('betdown').addEventListener('click', betMax);
+const bDnLis = document.getElementById('betmax').addEventListener('click', betMax);
 const leverLis = document.getElementById('lever').addEventListener('click', leverPull);
 const resetLis = document.getElementById('reset').addEventListener('click', init);
 
@@ -41,23 +41,19 @@ function render() {
 }
 
 function betUp() { // Add 1 Credit wager (to 3 max)
-    if (wager === 3) return;
-    credits--;
-    wager++;
-    credDisp.innerHTML = `${credits}`;
-    betDisp.innerHTML = `${wager}`;
+    if (wager < 3) {
+        credits--;
+        wager++;
+    } else { return };
+    render();
 }
 
 function betMax() { // Bet maximum 3 Credits
-    if (wager - 3 === 0) {
-        leverPull
-    } else if (wager - 3 !== 0) {
+    while (wager < 3) {
         credits--;
         wager++;
-        return;
-    };
-    betDisp.innerHTML = `${wager}`;
-    credDisp.innerHTML = `${credits}`;
+    }
+    render();
 }
 
 function leverPull() {
