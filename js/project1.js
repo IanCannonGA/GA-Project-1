@@ -44,6 +44,7 @@ function betUp() { // subtract from credits, add to wager
     credDisp.innerHTML = `${credits}`;
     wager++;
     credDisp.innerHTML = `${wager}`;
+    render();
 }
 
 function betDown() { // subtract from wager, add to credits
@@ -52,6 +53,7 @@ function betDown() { // subtract from wager, add to credits
     betDisp.innerHTML = `${wager}`;
     credits++;
     credDisp.innerHTML = `${credits}`;
+    render();
 }
 
 function leverPull() {
