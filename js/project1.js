@@ -41,25 +41,26 @@ function render() {
 }
 
 function betUp() { // subtract from credits, add to wager
-    if (credits <= 0) return;
+    if (credits === 0) return;
     credits--;
-    credDisp.innerHTML = `${credits}`;
     wager++;
+    credDisp.innerHTML = `${credits}`;
     betDisp.innerHTML = `${wager}`;
-    render();
 }
 
 function betDown() { // subtract from wager, add to credits
-    if (wager <= 0) return;
+    if (wager === 0) return;
     wager--;
-    betDisp.innerHTML = `${wager}`;
     credits++;
+    betDisp.innerHTML = `${wager}`;
     credDisp.innerHTML = `${credits}`;
-    render();
 }
 
 function leverPull() {
-    if (wager === 0) return;
+    if (wager === 0) {
+        alert("You must bet at least 1 credit");
+        return
+    };
     reelDisp1.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
     reelDisp2.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
     reelDisp3.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
