@@ -8,16 +8,15 @@ _1. Define required constants:_\
   1.2. A set of winning conditions. (n.b. 3x10 slots = 1000 outcomes... brute force is inadvisable; a total-value-of-reels may be needed.)
 
 _2. Define variables to track the game state:_\
-  2.1. The player "wallet."\
+  2.1. The player credits/current amount remaining.\
   2.2. The readouts of the slot machine reels.\
-  2.3. The amount wagered from the wallet.\
-  2.4. The current wallet amount remaining.\
-  (ICEBOX 2.5. The number of rounds played.)
+  2.3. The amount wagered from credits.\
+  (ICEBOX 2.4. The number of rounds played.)
 
 _3. Create cache elements:_\
   3.1. All three reels.\
-  3.2. Wallet display of credits remaining. \
-  3.3. Amount being bet from the Wallet.\
+  3.2. Display of credits remaining. \
+  3.3. Amount being bet from credits.\
   (ICEBOX 3.4. Total number of rounds played.)
 
 _4. When loaded, the app should:_\

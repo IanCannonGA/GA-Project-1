@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const slotsReel = ['C', 'C', 'C', 'C', '$', '$', '$', '7', '7', 'JP'];
+const slotsReel = ['X', 'A', 'B', 'C', '$', '$$', '$$$', '7', 'G', 'JP'];
 const winConditions = {};
 
 /*----- app's state (variables) -----*/
@@ -14,7 +14,7 @@ const betDisp = document.getElementById('w-amount');
 
 /*----- event listeners -----*/
 const bUpLis = document.getElementById('betup').addEventListener('click', betUp);
-const bDnLis = document.getElementById('betdown').addEventListener('click', betDown);
+const bDnLis = document.getElementById('betdown').addEventListener('click', betMax);
 const leverLis = document.getElementById('lever').addEventListener('click', leverPull);
 const resetLis = document.getElementById('reset').addEventListener('click', init);
 
@@ -22,9 +22,9 @@ const resetLis = document.getElementById('reset').addEventListener('click', init
 init();
 
 function init() {
-    credits = 9;
+    credits = 10;
     credDisp.innerHTML = `${credits}`;
-    wager = 1;
+    wager = 0;
     betDisp.innerHTML = `${wager}`;
     reel1 = null;
     reel2 = null;
@@ -40,26 +40,29 @@ function render() {
     betDisp.innerHTML = `${wager}`;
 }
 
-function betUp() { // subtract from credits, add to wager
-    if (credits === 0) return;
+function betUp() { // Add 1 Credit wager (to 3 max)
+    if (wager === 3) return;
     credits--;
     wager++;
     credDisp.innerHTML = `${credits}`;
     betDisp.innerHTML = `${wager}`;
 }
 
-function betDown() { // subtract from wager, add to credits
-    if (wager === 0) return;
-    wager--;
-    credits++;
+function betMax() { // Bet maximum 3 Credits
+    if (wager - 3 === 0) {
+        leverPull
+    } else if (wager - 3 !== 0) {
+        credits--;
+        wager++;
+        return;
+    };
     betDisp.innerHTML = `${wager}`;
     credDisp.innerHTML = `${credits}`;
 }
 
 function leverPull() {
     if (wager === 0) {
-        alert("You must bet at least 1 credit");
-        return
+        wager === 1
     };
     reelDisp1.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
     reelDisp2.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
