@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const slotsReel = ['X', 'A', 'B', 'C', '$', '$$', '$$$', '7', 'G', 'JP'];
+const virtualReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', '7', '7', '7', 'G', 'G', 'JP'];
 const winConditions = {};
 
 /*----- app's state (variables) -----*/
@@ -61,9 +61,9 @@ function leverPull() {
         credits--;
         wager++;
     };
-    reelDisp1.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
-    reelDisp2.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
-    reelDisp3.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
+    reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
+    reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
+    reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
     wager = 0;
     checkReels();
     render();
