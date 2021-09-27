@@ -1,9 +1,10 @@
 /*----- constants -----*/
-const virtualReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', '7', '7', '7', 'G', 'G', 'JP'];
+const virtualReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', '7', '7', '7', 'G', 'G', 'JP'];
+
 const winConditions = {};
 
 /*----- app's state (variables) -----*/
-let credits, wager, reel1, reel2, reel3;
+let credits, wager, reelArray;
 
 /*----- cached element references -----*/
 const reelDisp1 = document.getElementById('r1');
@@ -26,16 +27,17 @@ function init() {
     credDisp.innerHTML = `${credits}`;
     wager = 0;
     betDisp.innerHTML = `${wager}`;
-    reel1 = null;
-    reel2 = null;
-    reel3 = null;
+    reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
+    reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
+    reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
+    reelArray = [];
     render();
 }
 
 function render() {
-    reelDisp1.innerHTML = `${reel1}`;
-    reelDisp2.innerHTML = `${reel2}`;
-    reelDisp3.innerHTML = `${reel3}`;
+    reelDisp1.innerHTML;
+    reelDisp2.innerHTML;
+    reelDisp3.innerHTML;
     credDisp.innerHTML = `${credits}`;
     betDisp.innerHTML = `${wager}`;
 }
@@ -64,8 +66,10 @@ function leverPull() {
     reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
     reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
     reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
-    wager = 0;
+    reelArray.push(reelDisp1.innerHTML, reelDisp2.innerHTML, reelDisp3.innerHTML);
+    console.log(reelArray);
     checkReels();
+    wager = 0;
     render();
     if (credits === 0) { alert("GAME OVER"); }
 }
