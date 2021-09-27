@@ -23,7 +23,9 @@ init();
 
 function init() {
     credits = 9;
+    credDisp.innerHTML = `${credits}`;
     wager = 1;
+    betDisp.innerHTML = `${wager}`;
     reel1 = null;
     reel2 = null;
     reel3 = null;
@@ -43,7 +45,7 @@ function betUp() { // subtract from credits, add to wager
     credits--;
     credDisp.innerHTML = `${credits}`;
     wager++;
-    credDisp.innerHTML = `${wager}`;
+    betDisp.innerHTML = `${wager}`;
     render();
 }
 
@@ -57,6 +59,7 @@ function betDown() { // subtract from wager, add to credits
 }
 
 function leverPull() {
+    if (wager === 0) return;
     reelDisp1.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
     reelDisp2.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
     reelDisp3.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
