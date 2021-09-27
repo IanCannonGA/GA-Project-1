@@ -22,11 +22,11 @@ const resetLis = document.getElementById('reset').addEventListener('click', rese
 init();
 
 function init() {
-    credits: 9;
-    wager: 1;
-    reel1: null;
-    reel2: null;
-    reel3: null;
+    credits = 10;
+    wager = 0;
+    reel1 = null;
+    reel2 = null;
+    reel3 = null;
     render();
 }
 
@@ -36,7 +36,6 @@ function render() {
     reelDisp3.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
     credDisp.innerHTML = `${credits}`;
     betDisp.innerHTML = `${wager}`;
-
 }
 
 function betUp() { // subtract from credits, add to wager
