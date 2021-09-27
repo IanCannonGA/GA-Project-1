@@ -18,12 +18,13 @@
 }
 
 #banner {
-    align-content: right;
+    justify-content: right;
 }
 
 #reset {
     height: 30px;
     width: 60px;
+    font-weight: bold;
     color: darkred;
     background: black;
 }
@@ -31,7 +32,7 @@
 #reels-lever {
     display: grid;
     grid-template-areas: 'reel1 reel2 reel3 lever';
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: center;
 }
 
@@ -47,32 +48,27 @@
     box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
-
-}
 #lever:active {
-    -webkit-box-shadow: 5px 5px 3px 3px rgba(255, 255, 255, 1.0);
-    box-shadow: 5px 5px 3px 3px rgba(255, 255, 255, 1.0);
+    background-color: white;
 }
+
 #money {
     display: grid;
     grid-template-areas: 'credits c-amount wager w-amount';
     justify-content: space-evenly;
-    margin: 0px 100px;
     border-radius: 2.5%;
     border: 5px solid silver;
-    padding: 0px 25px;
+    margin: 25px 25px 0px;
     background: black;
     color: silver;
-    text: bold;
+    font-weight: bold;
     color: green;
     background-color: black;
 }
+
 #betting {
     padding: 20px;
     display: grid;
     grid-template-areas: 'betdown betup';
     justify-content: space-around;
-}
-@media only screen and {
-    max-width: 768px
 }

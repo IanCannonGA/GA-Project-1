@@ -16,7 +16,7 @@ const betDisp = document.getElementById('w-amount');
 const bUpLis = document.getElementById('betup').addEventListener('click', betUp);
 const bDnLis = document.getElementById('betdown').addEventListener('click', betDown);
 const leverLis = document.getElementById('lever').addEventListener('click', leverPull);
-const resetLis = document.getElementById('reset').addEventListener('click', reset);
+const resetLis = document.getElementById('reset').addEventListener('click', init);
 
 /*----- functions -----*/
 init();
@@ -63,8 +63,4 @@ function leverPull() {
     reelDisp1.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
     reelDisp2.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
     reelDisp3.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
-}
-
-function reset() {
-    init();
 }
