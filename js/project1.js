@@ -57,10 +57,19 @@ function betMax() { // Bet maximum 3 Credits
 }
 
 function leverPull() {
-    if (wager === 0) {
-        wager === 1
+    if (credits > 0 && wager === 0) {
+        credits--;
+        wager++;
     };
     reelDisp1.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
     reelDisp2.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
     reelDisp3.innerHTML = `${Math.floor(Math.random()*slotsReel.length)}`;
+    wager = 0;
+    checkReels();
+    render();
+    if (credits === 0) { alert("GAME OVER"); }
+}
+
+function checkReels() {
+    alert("PLACEHOLDER MESSAGE");
 }
