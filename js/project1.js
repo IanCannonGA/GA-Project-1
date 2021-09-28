@@ -62,15 +62,15 @@ function leverPull() {
         credits--;
         wager++;
     };
-    reelArray = [];
-    setTimeout(function() { reelDisp1.innerHTML = "<img src=https://i.imgur.com/Botj2B8.gif>"; }, 1000);
-    setTimeout(function() { reelDisp2.innerHTML = "<img src=https://i.imgur.com/Botj2B8.gif>"; }, 2000);
-    setTimeout(function() { reelDisp3.innerHTML = "<img src=https://i.imgur.com/Botj2B8.gif>"; }, 3000);
-    reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
-    reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
-    reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
-    reelArray.push(reelDisp1.innerHTML, reelDisp2.innerHTML, reelDisp3.innerHTML);
-    console.log(reelArray);
+    reelDisp1.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
+    reelDisp2.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
+    reelDisp3.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
+    setTimeout(function() { reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 1000);
+    setTimeout(function() { reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 2000);
+    setTimeout(function() { reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 3000);
+    setTimeout(function() {
+        reelArray.push(reelDisp1.innerHTML, reelDisp2.innerHTML, reelDisp3.innerHTML);
+    }, 3001);
     checkReels();
     wager = 0;
     render();

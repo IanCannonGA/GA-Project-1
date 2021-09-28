@@ -36,19 +36,21 @@
         align-content: center;
     }
     
-    #r1 #r2 #r3 {
-        justify-items: center;
-        align-items: space-evenly;
-        height: 200px;
-        width: 150px;
-    }
-    
+    #r1,
+    #r2,
+    #r3,
     #lever {
-        height: 180px;
-        width: 130px;
+        align-content: center;
+        align-items: space-evenly;
+        height: 150px;
+        width: 110px;
         border-radius: 5%;
         padding: 5px;
         border: 5px solid silver;
+    }
+    
+    #lever {
+        margin: 22px 0px;
     }
     
     #lever:hover {
