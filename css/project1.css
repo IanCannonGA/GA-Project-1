@@ -32,16 +32,24 @@
 #reels-lever {
     display: grid;
     grid-template-areas: 'reel1 reel2 reel3 lever';
-    justify-content: space-around;
-    align-content: center;
+    justify-content: space-evenly;
+}
+
+#r1,
+#r2,
+#r3,
+#lever {
+    text-align: center;
+    text-justify: center;
+    height: 160px;
+    width: 120px;
+    border-radius: 5%;
+    border: 5px solid silver;
 }
 
 #lever {
-    height: 180px;
-    width: 130px;
-    border-radius: 5%;
     padding: 5px;
-    border: 5px solid silver;
+    margin: 21px 0px;
 }
 
 #lever:hover {
