@@ -1,25 +1,18 @@
 /*----- constants -----*/
-const virtualReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', 'L7', 'L7', 'L7', 'GB', 'GB', 'JP'];
-const X = '<img src="https://i.imgur.com/q7sXusy.png">'
-const C = '<img src="https://i.imgur.com/HmbaFJQ.png">'
-const $1 = '<img src="https://i.imgur.com/7bwFIT5.png">'
-const $2 = '<img src="https://i.imgur.com/QAvBOuo.png">'
-const $3 = '<img src="https://i.imgur.com/N1H3Y4E.png">'
-const L7 = '<img src="https://i.imgur.com/pSF0crI.png">'
-const GB = '<img src="https://i.imgur.com/0ch4BUf.png">'
-const JP = '<img src="https://i.imgur.com/VD410p1.png">'
+const vReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', 'L7', 'L7', 'L7', 'GB', 'GB', 'JP'];
+// const vReel = [X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, C, C, C, C, C, C, C, C, C, C, C, C, C, C, $1, $1, $1, $1, $1, $1, $1, $1, $1, $1, $2, $2, $2, $2, $2, $2, $2, $3, $3, $3, $3, L7, L7, L7, GB, GB, JP];
 const winConditions = {};
 
 /*----- app's state (variables) -----*/
 let credits, wager, reelArray;
 
 /*----- cached element references -----*/
-const reelDisp1 = document.getElementById('r1');
-const reelDisp2 = document.getElementById('r2');
-const reelDisp3 = document.getElementById('r3');
+const rDisp1 = document.getElementById('r1');
+const rDisp2 = document.getElementById('r2');
+const rDisp3 = document.getElementById('r3');
 const credDisp = document.getElementById('c-amount');
 const betDisp = document.getElementById('w-amount');
-
+const rFlash = `${'<img src="https://i.imgur.com/Botj2B8.gif">'}`;
 
 /*----- event listeners -----*/
 const bUpLis = document.getElementById('betup').addEventListener('click', betUp);
@@ -33,18 +26,16 @@ init();
 function init() {
     credits = 10;
     credDisp.innerHTML = `${credits}`;
+    reelArray = [];
     wager = 0;
     betDisp.innerHTML = `${wager}`;
-    reelArray = [];
-    reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
-    reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
-    reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
+    rDisp1.innerHTML = `${vReel[Math.floor(Math.random()*vReel.length)]}`;
+    rDisp2.innerHTML = `${vReel[Math.floor(Math.random()*vReel.length)]}`;
+    rDisp3.innerHTML = `${vReel[Math.floor(Math.random()*vReel.length)]}`;
     render();
 }
 
 function render() {
-    reelDisp1.innerHTML; = reelDisp2.innerHTML;
-    reelDisp3.innerHTML;
     credDisp.innerHTML = `${credits}`;
     betDisp.innerHTML = `${wager}`;
 }
@@ -65,35 +56,36 @@ function betMax() { // Bet maximum 3 Credits
     render();
 }
 
-function leverPull() {
+function leverPull() { // Bet 1 credit if none wagered yet
     if (credits > 0 && wager === 0) {
         credits--;
         wager++;
     };
-    reelDisp1.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
-    reelDisp2.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
-    reelDisp3.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
-    setTimeout(function() { reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 1000);
-    setTimeout(function() { reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 2000);
-    setTimeout(function() { reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 3000);
-    setTimeout(function() { <<
-        <<
-        <<
-        < HEAD
-        reelArray.push(reelDisp1.innerHTML, reelDisp2.innerHTML, reelDisp3.innerHTML); ===
-        ===
-        =
-        reelArray.push(virtualReel[reelDisp1.innerHTML], virtualReel[reelDisp2.innerHTML], virtualReel[reelDisp3.innerHTML]); >>>
-        >>>
-        >
-        main
-    }, 3001);
-    checkReels();
-    wager = 0;
+    reelArray = [];
+    rDisp1.innerHTML = rFlash;
+    rDisp2.innerHTML = rFlash;
+    rDisp3.innerHTML = rFlash;
+    setTimeout(function() {
+        rDisp1.innerHTML = `${vReel[Math.floor(Math.random()*vReel.length)]}`;
+        reelArray.push(rDisp1.innerHTML);
+    }, 1000);
+    setTimeout(function() {
+        rDisp2.innerHTML = `${vReel[Math.floor(Math.random()*vReel.length)]}`;
+        reelArray.push(rDisp2.innerHTML);
+    }, 2000);
+    setTimeout(function() {
+        rDisp3.innerHTML = `${vReel[Math.floor(Math.random()*vReel.length)]}`;
+        reelArray.push(rDisp3.innerHTML);
+    }, 3000);
     render();
+    wager = 0;
     if (credits === 0) { alert("GAME OVER"); return; };
 }
 
-function checkReels() {
+function checkReelArray() {
     console.log(reelArray);
+    return reelArray.reduce(function(total, char) {
+        total[char] = total[char] ? ++total[char] : 1;
+        return total;
+    }, {});
 }
