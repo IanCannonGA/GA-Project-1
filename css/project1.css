@@ -18,10 +18,13 @@
 }
 
 #banner {
+    text-decoration-line: underline;
+    color: silver;
     justify-content: right;
 }
 
 #reset {
+    margin: 30px 0 0 0;
     height: 30px;
     width: 60px;
     font-weight: bold;
@@ -39,16 +42,23 @@
 #r2,
 #r3,
 #lever {
-    text-align: center;
-    text-justify: center;
-    height: 160px;
-    width: 120px;
+    height: 200px;
+    width: 150px;
     border-radius: 5%;
+}
+
+#r1,
+#r2,
+#r3 {
+    color: white;
+    background-color: white;
     border: 5px solid silver;
 }
 
 #lever {
-    margin: 20px 0px;
+    border: solid 5px gold;
+    background-color: goldenrod;
+    margin: 21px 0px;
 }
 
 #lever:hover {
@@ -67,9 +77,8 @@
     border: 5px solid silver;
     margin: 25px 25px 0px;
     background: black;
-    color: silver;
     font-weight: bold;
-    color: green;
+    color: silver;
     background-color: black;
 }
 
