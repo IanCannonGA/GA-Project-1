@@ -1,6 +1,5 @@
 /*----- constants -----*/
 const virtualReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', '7', '7', '7', 'G', 'G', 'JP'];
-
 const winConditions = {};
 
 /*----- app's state (variables) -----*/
@@ -27,10 +26,10 @@ function init() {
     credDisp.innerHTML = `${credits}`;
     wager = 0;
     betDisp.innerHTML = `${wager}`;
+    reelArray = [];
     reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
     reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
     reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
-    reelArray = [];
     render();
 }
 
@@ -63,6 +62,10 @@ function leverPull() {
         credits--;
         wager++;
     };
+    reelArray = [];
+    setTimeout(function() { reelDisp1.innerHTML = "<img src=https://i.imgur.com/Botj2B8.gif>"; }, 1000);
+    setTimeout(function() { reelDisp2.innerHTML = "<img src=https://i.imgur.com/Botj2B8.gif>"; }, 2000);
+    setTimeout(function() { reelDisp3.innerHTML = "<img src=https://i.imgur.com/Botj2B8.gif>"; }, 3000);
     reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
     reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
     reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
@@ -71,9 +74,9 @@ function leverPull() {
     checkReels();
     wager = 0;
     render();
-    if (credits === 0) { alert("GAME OVER"); }
+    if (credits === 0) { alert("GAME OVER"); return; };
 }
 
 function checkReels() {
-    alert("PLACEHOLDER MESSAGE");
+    console.log(reelArray);
 }
