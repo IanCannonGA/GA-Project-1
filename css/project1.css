@@ -1,13 +1,14 @@
 #body {
     display: grid;
     grid-template-areas: 'main lever';
-    align-items: center;
+    justify-content: center;
+    align-content: center;
     background-color: darkgreen;
     width: 768px;
 }
 
 #main {
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
     font-family: 'Times New Roman';
     display: grid;
@@ -34,7 +35,7 @@
 }
 
 #reset {
-    margin: 30px 0 0 0;
+    margin: 5px;
     height: 30px;
     width: 60px;
     font-weight: bold;
@@ -59,9 +60,8 @@
 }
 
 #lever {
-    border-radius: 5%;
-    border: solid 5px gold;
-    background-color: goldenrod;
+    justify-content: center;
+    margin: 96px 0px;
 }
 
 #lever:hover {
@@ -97,5 +97,4 @@
     border: 5px solid silver;
     color: silver;
     background: black;
-    margin: 0px 0px 0px 25px;
 }

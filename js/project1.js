@@ -106,8 +106,8 @@ function leverPull() {
     }, 2251);
 }
 
-function checkReels() { //create win-payout-lose logic
-    let reelCount = reelArray.reduce(function(total, sym) { //reduce and count elements
+function checkReels() { //create win-payout-lose logic function
+    let reelCount = reelArray.reduce(function(total, sym) { //reduce and count elements as "reelCount"
         total[sym] = total[sym] ? ++total[sym] : 1; //generated into reelArray
         return total; // Remember RETURN when you do lots of changes to an object like this
     }, {});
