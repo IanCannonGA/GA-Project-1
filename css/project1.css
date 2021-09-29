@@ -90,3 +90,5 @@
        grid-template-areas: 'betdown betup';
        justify-content: space-around;
    }
+   
+   @media screen
