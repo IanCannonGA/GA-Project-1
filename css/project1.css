@@ -11,7 +11,7 @@
     font-family: 'Times New Roman';
     display: grid;
     grid-gap: 5px;
-    grid-template-areas: 'topline' 'reels' 'money' 'betting';
+    grid-template-areas: 'topline' 'reels' 'money' 'betting' 'payouts';
     border: 5px solid silver;
     background-color: green;
     text-transform: bold red;
@@ -89,4 +89,16 @@
     display: grid;
     grid-template-areas: 'betdown betup';
     justify-content: space-around;
+}
+
+#payouts {
+    justify-content: center;
+    border: 5px solid silver;
+    color: silver;
+    background: black;
+    margin: 0px 0px 0px 10px;
+}
+
+@media screen {
+    only and max-width: 768px;
 }
