@@ -97,9 +97,5 @@
     border: 5px solid silver;
     color: silver;
     background: black;
-    margin: 0px 0px 0px 10px;
-}
-
-@media screen {
-    only and max-width: 768px;
+    margin: 0px 0px 0px 25px;
 }
