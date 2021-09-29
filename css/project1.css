@@ -1,8 +1,16 @@
 #body {
-    font-family: verdana;
+    display: grid;
+    grid-template-areas: 'main lever';
+    align-items: center;
+}
+
+#main {
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
     display: grid;
     grid-gap: 5px;
-    grid-template-areas: 'topline' 'reels-lever' 'money' 'betting';
+    grid-template-areas: 'topline' 'reels' 'money' 'betting';
     border: 5px solid silver;
     background-color: green;
     text-transform: bold red;
@@ -24,6 +32,7 @@
 }
 
 #reset {
+    margin: 30px 0 0 0;
     height: 30px;
     width: 60px;
     font-weight: bold;
@@ -31,9 +40,9 @@
     background: black;
 }
 
-#reels-lever {
+#reels {
     display: grid;
-    grid-template-areas: 'reel1 reel2 reel3 lever';
+    grid-template-areas: 'reel1 reel2 reel3';
     justify-content: space-evenly;
 }
 
@@ -43,7 +52,8 @@
 #lever {
     height: 200px;
     width: 150px;
-    border-radius: 5%;
+    justify-content: center;
+    align-items: center;
 }
 
 #r1,
@@ -55,9 +65,9 @@
 }
 
 #lever {
+    border-radius: 5%;
     border: solid 5px gold;
     background-color: goldenrod;
-    margin: 22px 0px;
 }
 
 #lever:hover {
@@ -87,3 +97,5 @@
     grid-template-areas: 'betdown betup';
     justify-content: space-around;
 }
+
+@media screen only and (min-width: 600px, max-width: 1024px)
