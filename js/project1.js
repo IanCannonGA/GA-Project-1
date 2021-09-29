@@ -32,6 +32,9 @@ const credDisp = document.getElementById('c-amount');
 const betDisp = document.getElementById('w-amount');
 const leverCtrl = document.getElementById('lever');
 const rFlash = `${'<img src="https://i.imgur.com/zBUj2q0.gif">'}`;
+const betSnd = new Audio('audio/Bet1.mp3');
+const betAll = new Audio('audio/BetMax.mp3');
+const leverSnd = new Audio('audio/leverPull.mp3');
 
 /*----- event listeners -----*/
 const bUpLis = document.getElementById('betup').addEventListener('click', betUp);
@@ -42,14 +45,14 @@ const resetLis = document.getElementById('reset').addEventListener('click', init
 /*----- functions -----*/
 init();
 
-function init() { //I only need to initiate tracked variables here
+function init() { //Only initiate tracked variables here
     credits = 10;
     wager = 0;
     reelArray = ["L7", "L7", "L7"];
     render();
 }
 
-function render() { //anything that goes on the PAGE goes here instead
+function render() { //Anything that goes on the PAGE goes here instead
     reelDisp1.innerHTML = imgLookup[reelArray[0]];
     reelDisp2.innerHTML = imgLookup[reelArray[1]];
     reelDisp3.innerHTML = imgLookup[reelArray[2]];
@@ -62,6 +65,7 @@ function betUp() { // Add 1 Credit wager (to 3 max)
     if (wager < 3) {
         credits--;
         wager++;
+        betSnd.play();
     } else { return };
     render();
 }
@@ -70,6 +74,7 @@ function betMax() { // Bet maximum 3 Credits
     while (wager < 3) {
         credits--;
         wager++;
+        betAll.play();
     }
     render();
 }
@@ -77,6 +82,7 @@ function betMax() { // Bet maximum 3 Credits
 function leverPull() {
     if (wager === 0) return;
     reelArray = [];
+    leverSnd.play();
     reelDisp1.innerHTML = rFlash;
     reelDisp2.innerHTML = rFlash;
     reelDisp3.innerHTML = rFlash;
