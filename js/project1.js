@@ -35,7 +35,7 @@ const rFlash = `${'<img src="https://i.imgur.com/zBUj2q0.gif">'}`;
 
 /*----- event listeners -----*/
 const bUpLis = document.getElementById('betup').addEventListener('click', betUp);
-const bDnLis = document.getElementById('betmax').addEventListener('click', betMax);
+const bMaxLis = document.getElementById('betmax').addEventListener('click', betMax);
 const leverLis = document.getElementById('lever').addEventListener('click', leverPull);
 const resetLis = document.getElementById('reset').addEventListener('click', init);
 
@@ -92,24 +92,24 @@ function leverPull() {
     }, 2251);
 }
 
-function checkReels() {
-    let reelCount = reelArray.reduce(function(total, sym) {
-        total[sym] = total[sym] ? ++total[sym] : 1;
-        return total;
+function checkReels() { //create win-payout-lose logic
+    let reelCount = reelArray.reduce(function(total, sym) { //reduce and count elements
+        total[sym] = total[sym] ? ++total[sym] : 1; //generated into reelArray
+        return total; // Remember RETURN when you do lots of changes to an object like this
     }, {});
-    let foundWinner = false;
-    for (let sym in reelCount) {
-        if (reelCount[sym] === 3) {
-            credits += wager + wager * payouts[sym];
-            foundWinner = true;
-            break;
+    let foundWinner = false; //start with winner of payout as-yet unflagged
+    for (let sym in reelCount) { //for loop: start w/ arbitrary 'sym' index object for the reelCount array
+        if (reelCount[sym] === 3) { //if 3-of-a-kind are counted up
+            credits += wager + wager * payouts[sym]; //multiply wager by payout factor (indexed by 'sym')
+            foundWinner = true; //flag winner to true
+            break; //end of line
         }
     }
-    if (!foundWinner && reelCount.C === 1) {
-        if (Object.keys(reelCount).length === 2) {
-            credits += wager + wager * 5;
+    if (!foundWinner && reelCount.C === 1) { //alternatively, if there's no winner flagged
+        if (Object.keys(reelCount).length === 2) { //and there's A cherry & two-of-a-kind
+            credits += wager + wager * 5; //multiply wager x 5
         } else {
-            credits += wager + wager * 2;
+            credits += wager + wager * 2; //otherwise fallback to base x2 reward + wager
         }
     }
 }
