@@ -77,7 +77,7 @@
     justify-content: space-evenly;
     border-radius: 2.5%;
     border: 5px solid silver;
-    margin: 25px 25px 0px;
+    padding: 5px 0 0 0;
     background: black;
     font-weight: bold;
     color: silver;
