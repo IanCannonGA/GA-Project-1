@@ -2,7 +2,8 @@
     display: grid;
     grid-template-areas: 'main lever';
     align-items: center;
-    background-color: steelblue;
+    background-color: darkgreen;
+    width: 768px;
 }
 
 #main {
@@ -11,7 +12,7 @@
     font-family: 'Times New Roman';
     display: grid;
     grid-gap: 5px;
-    grid-template-areas: 'topline' 'reels' 'money' 'betting';
+    grid-template-areas: 'topline' 'reels' 'money' 'betting' 'payouts';
     border: 5px solid silver;
     background-color: green;
     text-transform: bold red;
@@ -44,7 +45,7 @@
 #reels {
     display: grid;
     grid-template-areas: 'reel1 reel2 reel3';
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #r1,
@@ -91,4 +92,14 @@
     justify-content: space-around;
 }
 
-@media screen
+#payouts {
+    justify-content: center;
+    border: 5px solid silver;
+    color: silver;
+    background: black;
+    margin: 0px 0px 0px 10px;
+}
+
+@media screen {
+    only and max-width: 768px;
+}
