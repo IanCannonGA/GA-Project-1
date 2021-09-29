@@ -106,36 +106,38 @@ function leverPull() {
     }, 2251);
 }
 
-function checkReels() { //create win-payout-lose logic function
-    let reelCount = reelArray.reduce(function(total, sym) { //reduce and count elements as "reelCount"
-        total[sym] = total[sym] ? ++total[sym] : 1; //generated into reelArray
-        return total; // Remember RETURN when you do lots of changes to an object like this
+function checkReels() {
+    let reelCount = reelArray.reduce(function(total, sym) {
+        total[sym] = total[sym] ? ++total[sym] : 1;
+        return total;
     }, {});
-    let foundWinner = false; //start with winner of payout as-yet unflagged
-    for (let sym in reelCount) { //for loop: start w/ arbitrary 'sym' index object for the reelCount array
-        if (reelCount[sym] === 3) { //if 3-of-a-kind are counted up
-            credits += wager + wager * payouts[sym]; //multiply wager by payout factor (indexed by 'sym')
-            foundWinner = true; //flag winner to true
-            break; //end of line
+    let foundWinner = false;
+    for (let sym in reelCount) {
+        if (reelCount[sym] === 3) {
+            credits += wager + wager * payouts[sym];
+            foundWinner = true;
+            break;
         }
     }
-    if (!foundWinner && reelCount.C === 1) { //alternatively, if there's no winner flagged
-        if (Object.keys(reelCount).length === 2) { //and there's A cherry & two-of-a-kind
-            credits += wager + wager * 5; //multiply wager x 5
+    if (!foundWinner && reelCount.C === 1) {
+        if (Object.keys(reelCount).length === 2) {
+            credits += wager + wager * 5;
+            foundWinner = true;
         } else {
-            credits += wager + wager * 2; //otherwise fallback to base x2 reward + wager
+            credits += wager + wager * 2;
+            foundWinner = true;
         }
     }
-    if (!foundWinner && //OR, if there's no winner yet
-        ((reelCount.$1 === 1 && reelCount.$2 === 2) || //and there are
-            (reelCount.$1 === 2 && reelCount.$2 === 1) || // any
-            (reelCount.$1 === 1 && reelCount.$3 === 2) || // combination
-            (reelCount.$1 === 2 && reelCount.$3 === 1) || // of
-            (reelCount.$2 === 1 && reelCount.$3 === 2) || // $s
-            (reelCount.$2 === 2 && reelCount.$3 === 1) || // found
-            (reelCount.$1 === 1 && reelCount.$2 === 1 && reelCount.$3 === 1) // in the reelArray count
+    if (!foundWinner &&
+        ((reelCount.$1 === 1 && reelCount.$2 === 2) ||
+            (reelCount.$1 === 2 && reelCount.$2 === 1) ||
+            (reelCount.$1 === 1 && reelCount.$3 === 2) ||
+            (reelCount.$1 === 2 && reelCount.$3 === 1) ||
+            (reelCount.$2 === 1 && reelCount.$3 === 2) ||
+            (reelCount.$2 === 2 && reelCount.$3 === 1) ||
+            (reelCount.$1 === 1 && reelCount.$2 === 1 && reelCount.$3 === 1)
         )) {
-        credits += wager + wager * 100; //multiply wager * 100, payback
+        credits += wager + wager * 100;
         foundWinner = true;
     }
 }
