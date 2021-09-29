@@ -126,4 +126,16 @@ function checkReels() { //create win-payout-lose logic function
             credits += wager + wager * 2; //otherwise fallback to base x2 reward + wager
         }
     }
+    if (!foundWinner && //OR, if there's no winner yet
+        ((reelCount.$1 === 1 && reelCount.$2 === 2) || //and there are
+            (reelCount.$1 === 2 && reelCount.$2 === 1) || // any
+            (reelCount.$1 === 1 && reelCount.$3 === 2) || // combination
+            (reelCount.$1 === 2 && reelCount.$3 === 1) || // of
+            (reelCount.$2 === 1 && reelCount.$3 === 2) || // $s
+            (reelCount.$2 === 2 && reelCount.$3 === 1) || // found
+            (reelCount.$1 === 1 && reelCount.$2 === 1 && reelCount.$3 === 1) // in the reelArray count
+        )) {
+        credits += wager + wager * 100; //multiply wager * 100, payback
+        foundWinner = true;
+    }
 }
