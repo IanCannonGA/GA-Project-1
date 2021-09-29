@@ -2,7 +2,8 @@
     display: grid;
     grid-template-areas: 'main lever';
     align-items: center;
-    background-color: steelblue;
+    background-color: darkgreen;
+    width: 768px;
 }
 
 #main {
@@ -44,7 +45,7 @@
 #reels {
     display: grid;
     grid-template-areas: 'reel1 reel2 reel3';
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #r1,
