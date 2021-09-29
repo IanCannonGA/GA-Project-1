@@ -26,7 +26,7 @@
     display: grid;
     grid-template-areas: 'banner reset';
     padding: 10px;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-content: center;
 }
 
