@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const virtualReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', 'L7', 'L7', 'L7', 'GB', 'GB', 'JP'];
+const virtualReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', 'L7', 'L7', 'L7', 'GB', 'GB', 'JP'];
 const imgLookup = {
     X: '<img src="https://i.imgur.com/q7sXusy.png">',
     C: '<img src="https://i.imgur.com/HmbaFJQ.png">',
@@ -20,11 +20,6 @@ const payouts = {
     'C': 10,
     'X': 0,
 };
-const betOne = new Audio();
-const betMax = new Audio();
-const leverSnd = new Audio();
-const reelSnd = new Audio();
-const payoutSnd = new Audio();
 
 /*----- app's state (variables) -----*/
 let credits, wager, reelArray;
@@ -36,7 +31,7 @@ const reelDisp3 = document.getElementById('r3');
 const credDisp = document.getElementById('c-amount');
 const betDisp = document.getElementById('w-amount');
 const leverCtrl = document.getElementById('lever');
-
+const rFlash = `${'<img src="https: //i.imgur.com/zBUj2q0.gif">'}`;
 
 /*----- event listeners -----*/
 const bUpLis = document.getElementById('betup').addEventListener('click', betUp);
@@ -54,12 +49,16 @@ function init() { //I only need to initiate tracked variables here
     render();
 }
 
-function render() { //anything on the PAGE is here instead
+function render() { //anything that goes on the PAGE goes here instead
     reelDisp1.innerHTML = imgLookup[reelArray[0]];
     reelDisp2.innerHTML = imgLookup[reelArray[1]];
     reelDisp3.innerHTML = imgLookup[reelArray[2]];
-    credDisp.innerHTML = `${credits}`;
-    betDisp.innerHTML = `${wager}`;
+    credDisp.innerHTML = `
+$ { credits }
+`;
+    betDisp.innerHTML = `
+$ { wager }
+`;
     leverCtrl.style.cursor = wager ? 'grab' : 'not-allowed';
 }
 
@@ -80,11 +79,11 @@ function betMax() { // Bet maximum 3 Credits
 }
 
 function leverPull() {
-    if (wager === 0) { alert("Make Your Bet First!"); return; };
+    if (wager === 0) return;
     reelArray = [];
-    reelDisp1.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
-    reelDisp2.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
-    reelDisp3.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
+    reelDisp1.innerHTML = rFlash;
+    reelDisp2.innerHTML = rFlash;
+    reelDisp3.innerHTML = rFlash;
     setTimeout(function() { reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 750);
     setTimeout(function() { reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 1500);
     setTimeout(function() { reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 2250);
@@ -97,7 +96,7 @@ function leverPull() {
     }, 2251);
 }
 
-function checkReels() { //check values on reelArray, count up into reelCount
+function checkReels() {
     let reelCount = reelArray.reduce(function(total, sym) {
         total[sym] = total[sym] ? ++total[sym] : 1;
         return total;

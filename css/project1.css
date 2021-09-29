@@ -2,12 +2,13 @@
     display: grid;
     grid-template-areas: 'main lever';
     align-items: center;
+    background-color: steelblue;
 }
 
 #main {
     margin: 10px;
     padding: 10px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman';
     display: grid;
     grid-gap: 5px;
     grid-template-areas: 'topline' 'reels' 'money' 'betting';
@@ -97,5 +98,3 @@
     grid-template-areas: 'betdown betup';
     justify-content: space-around;
 }
-
-@media screen only and (min-width: 600px, max-width: 1024px)
