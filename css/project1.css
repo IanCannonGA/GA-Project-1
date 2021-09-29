@@ -49,17 +49,9 @@
    
    #r1,
    #r2,
-   #r3,
-   #lever {
-       height: 200px;
-       width: 150px;
-       justify-content: center;
-       align-items: center;
-   }
-   
-   #r1,
-   #r2,
    #r3 {
+       height: 210px;
+       width: 160px;
        color: white;
        background-color: white;
        border: 5px solid silver;

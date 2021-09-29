@@ -31,7 +31,7 @@ const reelDisp3 = document.getElementById('r3');
 const credDisp = document.getElementById('c-amount');
 const betDisp = document.getElementById('w-amount');
 const leverCtrl = document.getElementById('lever');
-const rFlash = `${'<img src="https: //i.imgur.com/zBUj2q0.gif">'}`;
+const rFlash = `${'<img src="https://i.imgur.com/zBUj2q0.gif">'}`;
 
 /*----- event listeners -----*/
 const bUpLis = document.getElementById('betup').addEventListener('click', betUp);
@@ -53,12 +53,8 @@ function render() { //anything that goes on the PAGE goes here instead
     reelDisp1.innerHTML = imgLookup[reelArray[0]];
     reelDisp2.innerHTML = imgLookup[reelArray[1]];
     reelDisp3.innerHTML = imgLookup[reelArray[2]];
-    credDisp.innerHTML = `
-$ { credits }
-`;
-    betDisp.innerHTML = `
-$ { wager }
-`;
+    credDisp.innerHTML = `${credits}`;
+    betDisp.innerHTML = `${wager}`;
     leverCtrl.style.cursor = wager ? 'grab' : 'not-allowed';
 }
 
