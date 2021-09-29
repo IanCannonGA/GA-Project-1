@@ -35,6 +35,7 @@ const rFlash = `${'<img src="https://i.imgur.com/zBUj2q0.gif">'}`;
 const betSnd = new Audio('audio/Bet1.mp3');
 const betAll = new Audio('audio/BetMax.mp3');
 const leverSnd = new Audio('audio/leverPull.mp3');
+const reelSnd = new Audio('audio/reelSpin.mp3');
 
 /*----- event listeners -----*/
 const bUpLis = document.getElementById('betup').addEventListener('click', betUp);
@@ -86,10 +87,17 @@ function leverPull() {
     reelDisp1.innerHTML = rFlash;
     reelDisp2.innerHTML = rFlash;
     reelDisp3.innerHTML = rFlash;
-    setTimeout(function() { reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 750);
-    setTimeout(function() { reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 1500);
-    setTimeout(function() { reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`; }, 2250);
     setTimeout(function() {
+        reelDisp1.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
+    }, 750);
+    setTimeout(function() {
+        reelDisp2.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
+    }, 1500);
+    setTimeout(function() {
+        reelDisp3.innerHTML = `${Math.floor(Math.random()*virtualReel.length)}`;
+    }, 2250);
+    setTimeout(function() {
+        reelSnd.play();
         reelArray.push(virtualReel[reelDisp1.innerHTML], virtualReel[reelDisp2.innerHTML], virtualReel[reelDisp3.innerHTML]);
         checkReels();
         wager = 0;
