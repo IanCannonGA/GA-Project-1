@@ -6,9 +6,9 @@
 \
 *1. Technologies Used*\
 \
-    1.1. HTML: Construction of basic layout, with each element separately ID'd for CSS, including top title line & reset, reels & lever, and credit & betting readouts & controls\
+    1.1. HTML: Construction of basic layout, with each element separately ID'd for CSS, including top title line & reset, reels & lever, credit & betting readouts & controls, and payout info image.\
 \
-    1.2. CSS: Styling applied to ID tagged elements, including CSS-Grid layout technique, bordering, background & text color\
+    1.2. CSS: Styling applied to ID tagged elements, including CSS-Grid layout technique, bordering, and background & text colors.\
 \
     1.3 JS: Creation of virtual "reel" for CONSTANTS (random/final readouts of each reel-window, payout values for each reel element), STATE Variables (credits, wager, reel array), CACHED Elements (controls, displays, and SFX), EVENT Listeners (reset, lever, bet buttons), and FUNCTIONS (bet 1, bet max, reset, and lever-pull(which in turn passes reel array to win logic function)).\
 \
@@ -24,11 +24,11 @@
 \
     2.5 The three randomized values are then compared using a set of payout constants, and a reward is offered (as displayed below the controls).\
 \
-    2.6 To restart the game from initiation, the page can be refreshed, OR the RESET button can be clicked; doing so will reset the credits to 10, void any wagers, and reset the reel displays back to their starting "7-7-7" value.\
+    2.6 To restart the game from initiation, the page can be refreshed, or the RESET button can be clicked; doing so will reset the credits to 10, void any wagers, and reset the reel displays back to their starting "7-7-7" value.\
 \
 *3. Next Steps*\
 \
-    3.1. More realistically "animated" reel gif (vertical slide?)\
+    3.1. More realistically "animated" reel gif (vertical slide?); animated wager payout?\
 \
     3.2. Flashing lights or other simple visuals to decorate the page (similar to realspace or online slot machines of various types).\
 \
