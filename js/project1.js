@@ -20,6 +20,11 @@ const payouts = {
     'C': 10,
     'X': 0,
 };
+const betOne = new Audio();
+const betMax = new Audio();
+const leverSnd = new Audio();
+const reelSnd = new Audio();
+const payoutSnd = new Audio();
 
 /*----- app's state (variables) -----*/
 let credits, wager, reelArray;
@@ -49,7 +54,7 @@ function init() { //I only need to initiate tracked variables here
     render();
 }
 
-function render() { //anything that goes on the PAGE goes here instead
+function render() { //anything on the PAGE is here instead
     reelDisp1.innerHTML = imgLookup[reelArray[0]];
     reelDisp2.innerHTML = imgLookup[reelArray[1]];
     reelDisp3.innerHTML = imgLookup[reelArray[2]];
@@ -75,7 +80,7 @@ function betMax() { // Bet maximum 3 Credits
 }
 
 function leverPull() {
-    if (wager === 0) return;
+    if (wager === 0) { alert("Make Your Bet First!"); return; };
     reelArray = [];
     reelDisp1.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
     reelDisp2.innerHTML = '<img src="https://i.imgur.com/Botj2B8.gif">';
