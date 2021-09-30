@@ -18,7 +18,7 @@
 \
     2.1. Upon loading, the screen will display the game: Three value reels, a lever to commit a bet, a readout of 10 starting credits and 0 wagered (with "Bet 1" and "Bet Maximum" buttons), and a reset switch.\
 \
-    2.2. To begin play, one can either click the "Bet 1" button, which will incrementally transfer 1 Credit per click from "Credits" to "Wager", up to a maximum value of 3 Credits; alternatively, one can click the "Bet Maximum" button to transfer 3 Credits in one action. A "clinking" sound effect will accompany "Bet 1", and a louder, more complex "clattering" will accompany "Bet Max."\
+    2.2. To begin play, one can either click the "Bet 1 Credit" button, which will incrementally transfer 1 Credit per click from "Credits" to "Wager", up to a maximum value of 3 Credits; alternatively, one can click the "Bet Maximum" button to transfer 3 Credits in one action. A "clinking" sound effect will accompany "Bet 1", and a louder, more complex "clattering" will accompany "Bet Max."\
 \
     2.3. Until at least 1 Credit is wagered, the lever will not function, and a "slash-circle" cursor will appear when moused over. Once at least 1 Credit is wagered, the "slash-circle" changes to an "open-hand" cursor, signifying the lever is ready to be pulled.\
 \
@@ -30,10 +30,11 @@
 \
 *3. Next Steps*\
 \
-    3.1. More realistically "animated" reel gif (vertical slide?); animated wager payout?\
+    3.1. More realistically "animated" reel gif (vertical slide effect?); animated wager payout?\
 \
     3.2. Flashing lights or other simple visuals to decorate the page (similar to realspace or online slot machines of various types).\
 \
-    3.3. Expanded control options: "nudge" switches for each reel (spending extra wager for each), multiple paylines (horizontal/diagonal).\
+    3.3 Expanded tracking options: Counters for "rounds played" and/or "amount won" with counting-out of number subtracting from won amount and adding to credits.\
 \
-    3.4 Expanded tracking options: Counters for "rounds played" and/or "amount won" with counting-out of number subtracting from won amount and adding to credits.\
+    3.4. Expanded control options: "nudge" switches for each reel (spending extra wager for each), multiple paylines (horizontal/diagonal).\
+    

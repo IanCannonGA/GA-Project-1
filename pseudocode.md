@@ -17,7 +17,7 @@ _3. Create cache elements:_\
   3.1. All three reels.\
   3.2. Display of credits remaining. \
   3.3. Amount being bet from credits.\
-  (ICEBOX ITEMS 3.4. Sound or visual effects, Number of rounds played.)
+  (ICEBOX ITEMS 3.4. Number of rounds played.)
 
 _4. When loaded, the app should:_\
   4.1 Initialize state variables:\
@@ -32,7 +32,6 @@ _4. When loaded, the app should:_\
     4.1.5.3. Display the amount the player has chosen to bet vs the remaining wallet amount.\
     4.1.5.4. The LEVER commits the wager and randomizes the reels, each timing out after the previous.\
     (ICEBOX ITEMS 4.1.5.5. Update number of rounds played so far.)\
-    (ICEBOX ITEMS 4.1.5.6. Play sounds and/or visual flash effects until reels time out.)
     
 _5. Determine outcome:_\
   5.1 Compare the reels' values against winning conditions from 1.2.\
