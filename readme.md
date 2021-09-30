@@ -32,6 +32,6 @@
 \
     3.2. Flashing lights or other simple visuals to decorate the page (similar to realspace or online slot machines of various types).\
 \
-    3.3. Expanded control options: "nudge" switches for each reel (spend an extra credit for each), multiple paylines (horizontal/diagonal).\
+    3.3. Expanded control options: "nudge" switches for each reel (spending extra wager for each), multiple paylines (horizontal/diagonal).\
 \
-    3.4 Expanded tracking options: Counters for "rounds played" and/or "amount won"; counting-out of number subtracting from win amount and adding to credits available.\
+    3.4 Expanded tracking options: Counters for "rounds played" and/or "amount won" with counting-out of number subtracting from won amount and adding to credits.\
