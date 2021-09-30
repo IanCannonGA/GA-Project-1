@@ -4,13 +4,15 @@
 \
 [Wireframe: Imgur Hosting](https://i.imgur.com/rhhANqR.jpg)\
 \
+[Game: GitHub](https://iancannonga.github.io/GA-Project-1/)
+\
 *1. Technologies Used*\
 \
     1.1. HTML: Construction of basic layout, with each element separately ID'd for CSS, including top title line & reset, reels & lever, credit & betting readouts & controls, and payout info image.\
 \
     1.2. CSS: Styling applied to ID tagged elements, including CSS-Grid layout technique, bordering, and background & text colors.\
 \
-    1.3 JS: Creation of virtual "reel" for CONSTANTS (random/final readouts of each reel-window, payout values for each reel element), STATE Variables (credits, wager, reel array), CACHED Elements (controls, displays, and SFX), EVENT Listeners (reset, lever, bet buttons), and FUNCTIONS (bet 1, bet max, reset, and lever-pull(which in turn passes reel array to win logic function)).\
+    1.3 JS: Creation of virtual "reel" for CONSTANTS (random/final readouts of each reel-window, payout values for each reel element), STATE Variables (credits, wager, reel array), CACHED Elements (controls, displays, and SFX), EVENT Listeners (reset, lever, bet buttons), and FUNCTIONS (bet 1, bet max, reset, and lever-pull (which in turn passes reel-array to win-logic function)).\
 \
 *2. Getting Started*\
 \

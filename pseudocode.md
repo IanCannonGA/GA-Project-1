@@ -4,7 +4,7 @@
 **SLOT MACHINE - PSEUDOCODE**
 
 _1. Define required constants:_\
-  1.1. An object for the reel, with lowest-value items as most populated (e.g. 4x Cherry, 3x $, 2x 7, 1x JACKPOT).\
+  1.1. An object for the reel, with lowest-value items as most populated (e.g. 5x spaces, 4x Cherry, 3x $, 2x 7, 1x JACKPOT).\
   1.2. A set of winning conditions. (n.b. 3x10 slots = 1000 outcomes... brute force is inadvisable; value-per-reel may be needed.)
 
 _2. Define variables to track the game state:_\
