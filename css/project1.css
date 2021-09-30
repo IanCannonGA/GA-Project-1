@@ -18,15 +18,18 @@
             padding: 10px;
             grid-gap: 5px;
             grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts reset';
-            border: 5px solid silver;
+            border: 5px silver ridge;
             background-color: green;
         }
         
         #banner {
-            text-decoration-line: underline;
+            font-size: 150%;
             font-weight: bold;
             color: silver;
-            margin: 0px 0px 10px 40px;
+            background: grey;
+            text-align: center;
+            border: 2.5px silver solid;
+            border-radius: 25%;
         }
         
         #reset {
@@ -49,7 +52,7 @@
             width: 160px;
             color: white;
             background-color: white;
-            border: 5px solid silver;
+            border: 5px silver inset;
         }
         
         #lever {
@@ -69,7 +72,7 @@
             justify-content: space-evenly;
             padding: 5px 0 0 0;
             border-radius: 2.5%;
-            border: 5px solid silver;
+            border: 5px silver inset;
             background: black;
             font-weight: bold;
             color: silver;
@@ -83,7 +86,7 @@
         }
         
         #payouts {
-            border: 5px solid silver;
+            border: 5px silver groove;
             margin: 0px 0px 10px 0px;
             color: silver;
         }
