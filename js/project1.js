@@ -31,6 +31,7 @@ const rDisp3 = document.getElementById('r3');
 const credDisp = document.getElementById('c-amount');
 const betDisp = document.getElementById('w-amount');
 const rFlash = `${'<img src="https://i.imgur.com/zBUj2q0.gif">'}`;
+const leverCtrl = document.getElementById('lever');
 const betSnd = new Audio('audio/Bet1.mp3');
 const betAll = new Audio('audio/BetMax.mp3');
 const leverSnd = new Audio('audio/leverPull.mp3');
