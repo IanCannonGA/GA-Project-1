@@ -66,7 +66,7 @@
 
 #money {
     grid-template-areas: 'credits c-amount wager w-amount';
-    justify-content: space-evenly;
+    justify-content: space-around;
     border-radius: 2.5%;
     border: 5px solid silver;
     padding: 5px 0 0 0;
