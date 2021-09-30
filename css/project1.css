@@ -15,27 +15,22 @@
     padding: 10px;
     font-family: 'Times New Roman';
     grid-gap: 5px;
-    grid-template-areas: 'topline' 'reels' 'money' 'betting' 'payouts';
+    grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts reset';
     border: 5px solid silver;
     background-color: green;
-}
-
-#topline {
-    grid-template-areas: 'banner reset';
-    padding: 10px;
 }
 
 #banner {
     text-decoration-line: underline;
     color: silver;
+    padding: 10px;
 }
 
 #reset {
-    margin: 30px 0 0 0;
-    margin: 5px;
     height: 30px;
-    width: 60px;
-    font-weight: bold;
+    width: 50px;
+    margin: 0px 0px 0px 5px;
+    padding: 0px 0px 5px 0px;
     color: darkred;
     background: black;
 }
@@ -76,6 +71,7 @@
     background: black;
     font-weight: bold;
     color: silver;
+    width: 486.5px;
 }
 
 #betting {
