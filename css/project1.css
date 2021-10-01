@@ -28,7 +28,7 @@
             color: silver;
             background: grey;
             text-align: center;
-            border: 2.5px silver solid;
+            border: 2.5px silver ridge;
             border-radius: 25%;
         }
         
@@ -70,13 +70,13 @@
         #money {
             grid-template-areas: 'credits c-amount wager w-amount';
             justify-content: space-evenly;
-            padding: 5px 0 0 0;
+            text-align: center;
             border-radius: 2.5%;
             border: 5px silver inset;
             background: black;
             font-weight: bold;
             color: silver;
-            width: 486.5px;
+            width: 54vh;
         }
         
         #betting {
