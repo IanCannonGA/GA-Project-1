@@ -20,7 +20,7 @@
 \
 *2. Getting Started*\
 \
-[Game: GitHub](https://iancannonga.github.io/GA-Project-1/)
+[Game: GitHub](https://iancannonga.github.io/GA-Project-1/)\
 \
     2.1. Upon loading, the screen will display the game: Three value reels, a lever to commit a bet, a readout of 3 starting credits and 0 wagered (with "Bet 1" and "Bet Maximum" buttons), and a reset switch.\
 \
