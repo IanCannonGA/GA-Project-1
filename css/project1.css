@@ -11,6 +11,7 @@
         background-color: #111111;
         font-family: 'Times New Roman';
         justify-content: center;
+        scale: 75%;
     }
     
     #main {
