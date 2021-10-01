@@ -1,9 +1,11 @@
 **GENERAL ASSEMBLY PROJECT 1 : Slot Machine**\
 \
 *"The One-Armed Bandit"*\
-
-    So-named after the traditional moniker for a slot machine, this game recreates the same action of the basic gambling machine—only without any risk to your bank accounts. Just like the real thing, there's even a lever you pull.\
-
+\
+[Screenshot: Imgur Hosting](https://i.imgur.com/YyUxspq.png)\
+\
+    So-named after the traditional moniker for a slot machine, this game recreates the same action of the basic gambling machine—only without any risk to your bank accounts. Just like the real thing, you even pull the lever.\
+\
 *1. Technologies Used*\
 \
 [Wireframe: Imgur Hosting](https://i.imgur.com/rhhANqR.jpg)\
@@ -13,6 +15,8 @@
     1.2. CSS: Styling applied to ID tagged elements, including CSS-Grid layout technique, bordering, and background & text colors.\
 \
     1.3 JS: Creation of virtual "reel" for CONSTANTS (random/final readouts of each reel-window, payout values for each reel element), STATE Variables (credits, wager, reel array), CACHED Elements (controls, displays, and SFX), EVENT Listeners (reset, lever, bet buttons), and FUNCTIONS (bet 1, bet max, reset, and lever-pull (which in turn passes reel-array to win-logic function)).\
+\
+    1.4 OTHERS: Image hosting - imgur.com; Images - free clip art and/or created/modified by me; Audio - samples from freesound.org\
 \
 *2. Getting Started*\
 \
@@ -34,7 +38,7 @@
 \
     3.1.1. Digit-by-digit counting-out of winnings adding to credits.\
 \
-    3.1. More realistically "animated" reel gif (vertical slide effect?); animated wager payout?\
+    3.1. More realistically "animated" reel gif (vertical slide effect?) or animated lever movement; animated wager payout?\
 \
     3.2. Flashing lights "behind" the reels, or other simple visuals to decorate the page (similar to realspace or online slot machines of various types).\
 \

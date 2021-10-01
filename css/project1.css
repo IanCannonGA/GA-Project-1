@@ -8,7 +8,7 @@
         
         #body {
             grid-template-areas: 'main lever';
-            background-color: darkgreen;
+            background-color: #111111;
             font-family: 'Times New Roman';
             justify-content: center;
             scale: 85%;
@@ -20,7 +20,7 @@
             grid-gap: 5px;
             grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts' 'reset';
             border: 5px silver ridge;
-            background-color: green;
+            background-color: darkgreen;
         }
         
         #banner {
@@ -29,7 +29,7 @@
             text-align: center;
             margin-bottom: 1.5%;
             margin-left: 17%;
-            color: silver;
+            color: whitesmoke;
             background: grey;
             border: 2.5px silver ridge;
             width: 66%;
