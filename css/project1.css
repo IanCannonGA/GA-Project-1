@@ -8,28 +8,31 @@
         
         #body {
             grid-template-areas: 'main lever';
-            justify-content: center;
             background-color: darkgreen;
             font-family: 'Times New Roman';
+            justify-content: center;
         }
         
         #main {
-            margin: 10px 0;
+            margin: 10px 0px;
             padding: 10px;
             grid-gap: 5px;
             grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts reset';
             border: 5px silver ridge;
             background-color: green;
+            width: 60vh;
         }
         
         #banner {
             font-size: 150%;
             font-weight: bold;
+            text-align: center;
+            margin-left: 15%;
+            margin-bottom: 1.5%;
             color: silver;
             background: grey;
-            text-align: center;
             border: 2.5px silver ridge;
-            border-radius: 25%;
+            width: 70%;
         }
         
         #reset {
@@ -56,7 +59,7 @@
         }
         
         #lever {
-            margin: 85px 0px;
+            margin-top: 33%;
         }
         
         #lever:hover {
@@ -76,17 +79,19 @@
             background: black;
             font-weight: bold;
             color: silver;
-            width: 54vh;
+            width: 97.5%;
         }
         
         #betting {
-            padding: 10px;
+            margin-top: 2.5%;
             grid-template-areas: 'betdown betup';
             justify-content: space-around;
         }
         
         #payouts {
+            scale: 95%;
             border: 5px silver groove;
             margin: 0px 0px 10px 0px;
             color: silver;
+            width: 55.5vh;
         }
