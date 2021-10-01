@@ -47,7 +47,7 @@ document.getElementById('reset').addEventListener('click', init);
 init();
 
 function init() { //Only initiate tracked variables here
-    credits = 10;
+    credits = 3;
     wager = 0;
     reelArr = ["L7", "L7", "L7"];
     render();
