@@ -1,92 +1,95 @@
-        #body,
-        #main,
-        #reels,
-        #money,
-        #betting {
-            display: grid;
-        }
-        
-        #body {
-            grid-template-areas: 'main lever';
-            background-color: #111111;
-            font-family: 'Times New Roman';
-            justify-content: center;
-            scale: 85%;
-        }
-        
-        #main {
-            margin: 10px 0px;
-            padding: 10px;
-            grid-gap: 5px;
-            grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts' 'reset';
-            border: 5px silver ridge;
-            background-color: darkgreen;
-        }
-        
-        #banner {
-            font-size: 150%;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 1.5%;
-            margin-left: 17%;
-            color: whitesmoke;
-            background: grey;
-            border: 2.5px silver ridge;
-            width: 66%;
-        }
-        
-        #reset {
-            height: 30px;
-            width: 50px;
-            margin: 0px 0px 0px 5px;
-            padding: 0px 0px 5px 0px;
-            color: darkred;
-            background: black;
-        }
-        
-        #reels {
-            grid-template-areas: 'reel1 reel2 reel3';
-            justify-content: space-around
-        }
-        
-        #r1,
-        #r2,
-        #r3 {
-            scale: 75%;
-            height: 170px;
-            width: 130px;
-            color: white;
-            background-color: white;
-            border: 5px silver inset;
-        }
-        
-        #lever {
-            margin-top: 33%;
-        }
-        
-        #lever:active {
-            transform: skew(-5deg) scaleY(90%);
-        }
-        
-        #money {
-            grid-template-areas: 'credits c-amount wager w-amount';
-            text-align: center;
-            border-radius: 2.5%;
-            border: 5px silver inset;
-            background: black;
-            font-weight: bold;
-            color: silver;
-        }
-        
-        #betting {
-            margin-top: 2.5%;
-            grid-template-areas: 'betdown betup';
-            justify-content: space-around;
-        }
-        
-        #payouts {
-            scale: 95%;
-            border: 5px silver groove;
-            margin: 0px 0px 10px 0px;
-            color: silver;
-        }
+#body,
+#main,
+#reels,
+#money,
+#betting {
+    display: grid;
+}
+
+#body {
+    grid-template-areas: 'main lever';
+    background-color: #111111;
+    font-family: 'Times New Roman';
+    justify-content: center;
+    scale: 80%;
+}
+
+#main {
+    margin: 10px 0px;
+    padding: 10px;
+    grid-gap: 5px;
+    grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts' 'reset';
+    border: 5px silver ridge;
+    background-color: darkgreen;
+}
+
+#banner {
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 17%;
+    color: whitesmoke;
+    background: grey;
+    border: 2.5px silver ridge;
+    width: 66%;
+}
+
+#reels {
+    grid-template-areas: 'reel1 reel2 reel3';
+    justify-content: space-around
+}
+
+#r1,
+#r2,
+#r3 {
+    scale: 75%;
+    height: 170px;
+    width: 130px;
+    color: white;
+    background-color: white;
+    border: 5px silver inset;
+}
+
+#lever {
+    margin-top: 33%;
+}
+
+#lever:active {
+    transform: skew(-5deg) scaleY(90%);
+}
+
+#money {
+    grid-template-areas: 'credits c-amount wager w-amount';
+    text-align: center;
+    border-radius: 2.5%;
+    border: 5px silver inset;
+    background: black;
+    font-weight: bold;
+    color: silver;
+    width: 80%;
+    margin: 0% 0% 5% 10%;
+}
+
+#betting {
+    margin-top: 2.5%;
+    grid-template-areas: 'betdown betup';
+    justify-content: space-around;
+}
+
+#payouts {
+    scale: 95%;
+    border: 5px silver groove;
+    margin: 0px 0px 10px 0px;
+    color: silver;
+}
+
+#reset {
+    text-align: center;
+    height: 30px;
+    width: 50px;
+    margin: 0px 0px 0px 45%;
+    padding: 0px 0px 5px 0px;
+    color: darkred;
+    background: black;
+}
