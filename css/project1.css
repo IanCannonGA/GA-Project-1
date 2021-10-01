@@ -63,12 +63,8 @@
             margin-top: 33%;
         }
         
-        #lever:hover {
-            box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
-        }
-        
         #lever:active {
-            background-color: white;
+            transform: skew(-5deg) scaleY(90%);
         }
         
         #money {
