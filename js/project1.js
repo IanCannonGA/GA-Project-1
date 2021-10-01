@@ -136,5 +136,8 @@ function checkReels() {
         )) {
         credits += wager + wager * 100;
     }
-    if (credits === 0) alert("GAME OVER");
+    if (credits === 0) {
+        alert("GAME OVER");
+        init();
+    }
 }
