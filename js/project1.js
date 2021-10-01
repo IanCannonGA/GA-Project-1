@@ -1,14 +1,14 @@
 /*----- constants -----*/
 const vReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', 'L7', 'L7', 'L7', 'GB', 'GB', 'JP'];
 const imgLookup = {
-    X: '<img src="https://i.imgur.com/q7sXusy.png">',
-    C: '<img src="https://i.imgur.com/HmbaFJQ.png">',
-    $1: '<img src="https://i.imgur.com/7bwFIT5.png">',
-    $2: '<img src="https://i.imgur.com/QAvBOuo.png">',
-    $3: '<img src="https://i.imgur.com/N1H3Y4E.png">',
-    L7: '<img src="https://i.imgur.com/pSF0crI.png">',
-    GB: '<img src="https://i.imgur.com/0ch4BUf.png">',
-    JP: '<img src="https://i.imgur.com/VD410p1.png">',
+    X: '<img src="https://i.imgur.com/9eSC34C.png">',
+    C: '<img src="https://i.imgur.com/rjTgMxb.png">',
+    $1: '<img src="https://i.imgur.com/zZ19C0E.png">',
+    $2: '<img src="https://i.imgur.com/BEUePaz.png">',
+    $3: '<img src="https://i.imgur.com/x792iZk.png">',
+    L7: '<img src="https://i.imgur.com/Y7AymBZ.png">',
+    GB: '<img src="https://i.imgur.com/Dl4rbSY.png">',
+    JP: '<img src="https://i.imgur.com/2dmtO3m.png">',
 }
 const payouts = {
     'JP': 1000,
@@ -30,7 +30,7 @@ const rDisp2 = document.getElementById('r2');
 const rDisp3 = document.getElementById('r3');
 const credDisp = document.getElementById('c-amount');
 const betDisp = document.getElementById('w-amount');
-const rFlash = `${'<img src="https://i.imgur.com/zBUj2q0.gif">'}`;
+const rFlash = `${'<img src="https://i.imgur.com/fWpKXye.gif">'}`;
 const leverCtrl = document.getElementById('lever');
 const betSnd = new Audio('audio/Bet1.mp3');
 const betAll = new Audio('audio/BetMax.mp3');

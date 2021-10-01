@@ -17,22 +17,21 @@
             margin: 10px 0px;
             padding: 10px;
             grid-gap: 5px;
-            grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts reset';
+            grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts' 'reset';
             border: 5px silver ridge;
             background-color: green;
-            width: 60vh;
         }
         
         #banner {
             font-size: 150%;
             font-weight: bold;
             text-align: center;
-            margin-left: 15%;
             margin-bottom: 1.5%;
+            margin-left: 17%;
             color: silver;
             background: grey;
             border: 2.5px silver ridge;
-            width: 70%;
+            width: 66%;
         }
         
         #reset {
@@ -46,13 +45,15 @@
         
         #reels {
             grid-template-areas: 'reel1 reel2 reel3';
+            justify-content: space-around
         }
         
         #r1,
         #r2,
         #r3 {
-            height: 210px;
-            width: 160px;
+            scale: 75%;
+            height: 170px;
+            width: 130px;
             color: white;
             background-color: white;
             border: 5px silver inset;
@@ -72,14 +73,12 @@
         
         #money {
             grid-template-areas: 'credits c-amount wager w-amount';
-            justify-content: space-evenly;
             text-align: center;
             border-radius: 2.5%;
             border: 5px silver inset;
             background: black;
             font-weight: bold;
             color: silver;
-            width: 97.5%;
         }
         
         #betting {
@@ -93,5 +92,4 @@
             border: 5px silver groove;
             margin: 0px 0px 10px 0px;
             color: silver;
-            width: 55.5vh;
         }
