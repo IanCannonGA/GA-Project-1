@@ -104,6 +104,10 @@ function leverPull() {
         reelArr.push(vReel[rDisp1.innerHTML], vReel[rDisp2.innerHTML], vReel[rDisp3.innerHTML]);
         checkReels();
         wager = 0;
+        if (credits === 0) {
+            bannerMsg.innerText = "⦿ Better Luck Next Time! ⦿";
+            reelArr = ["X", "X", "X", ];
+        }
         render();
     }, 2251);
 }
@@ -139,9 +143,5 @@ function checkReels() {
         )) {
         credits += wager + wager * 100;
     }
-    if (credits === 0) {
-        bannerMsg.innerText = "⦿ Better Luck Next Time! ⦿";
-        reelArr = ["X", "X", "X", ];
-        render();
-    }
+
 }
