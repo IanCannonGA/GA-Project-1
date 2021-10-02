@@ -106,7 +106,6 @@ function leverPull() {
         wager = 0;
         if (credits === 0) {
             bannerMsg.innerText = "⦿ Better Luck Next Time! ⦿";
-            reelArr = ["X", "X", "X", ];
         }
         render();
     }, 2251);
