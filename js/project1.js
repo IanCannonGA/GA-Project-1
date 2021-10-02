@@ -36,6 +36,7 @@ const betSnd = new Audio('audio/Bet1.mp3');
 const betAll = new Audio('audio/BetMax.mp3');
 const leverSnd = new Audio('audio/leverPull.mp3');
 const reelSnd = new Audio('audio/reelSpin.mp3');
+const bannerMsg = document.getElementById('banner');
 
 /*----- event listeners -----*/
 document.getElementById('betup').addEventListener('click', bet1);
@@ -72,11 +73,12 @@ function bet1() { // Add 1 Credit wager (to 3 max)
 }
 
 function betMax() { // Bet maximum 3 Credits
-    while (wager < 3) {
-        credits--;
-        wager++;
-        betAll.play();
-    }
+    if (credits >= 3)
+        while (wager < 3) {
+            credits--;
+            wager++;
+            betAll.play();
+        }
     render();
 }
 
@@ -137,7 +139,8 @@ function checkReels() {
         credits += wager + wager * 100;
     }
     if (credits === 0) {
-        alert("GAME OVER");
-        init();
+        bannerMsg.innerText = "⦿ Better Luck Next Time! ⦿";
+        reelArr = ["X", "X", "X"];
+        render();
     }
 }

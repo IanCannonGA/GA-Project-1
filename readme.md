@@ -28,7 +28,7 @@
 \
     2.3. Until at least 1 Credit is wagered, the lever will not function, and a "slash-circle" cursor will appear when moused over. Once at least 1 Credit is wagered, the "slash-circle" changes to an "open-hand" cursor, signifying the lever is ready to be pulled.\
 \
-    2.4. Pulling the lever will set the reels to "spinning," as well as playing a "lever" sound effect; a "ticking" sound will follow as the reels time out with a final value; if the values match any of the winning lines, the payout is added to credits, along with the wager. (Both are displayed below the controls as is traditional.) Running out of credits gives you a game-over message.\
+    2.4. Pulling the lever will set the reels to "spinning," as well as playing a "lever" sound effect; a "ticking" sound will follow as the reels time out with a final value; if the values match any of the winning lines, the payout is added to credits, along with the wager. (Both are displayed below the controls as is traditional.) Running out of credits gives you a game-over message, blanks the reels, and halts the game until restarted, as you're out of money and out of wagers.\
 \
     2.6 To restart the game, the page can be refreshed, or the RESET button can be clicked; doing so will reset the credits, void any wagers, and reset the reel displays back to their starting attract display of "7-7-7".\
 \
