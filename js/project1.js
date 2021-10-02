@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const vReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', 'L7', 'L7', 'L7', 'GB', 'GB', 'JP'];
+const vReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', 'L7', 'L7', 'L7', 'GB', 'GB', 'JP'];
 const imgLookup = {
     X: '<img src="https://i.imgur.com/9eSC34C.png">',
     C: '<img src="https://i.imgur.com/rjTgMxb.png">',
@@ -50,6 +50,7 @@ init();
 function init() { //Only initiate tracked variables here
     credits = 3;
     wager = 0;
+    bannerMsg.innerText = "⦿ The One-Armed Bandit ⦿";
     reelArr = ["L7", "L7", "L7"];
     render();
 }
@@ -114,13 +115,13 @@ function checkReels() {
     }, {});
     let foundWinner = false;
     for (let sym in reelCount) {
-        if (reelCount[sym] === 3) {
+        if (reelCount[sym] === 3 && reelCount.X === 0) {
             credits += wager + wager * payouts[sym];
             foundWinner = true;
             break;
         }
     }
-    if (!foundWinner && reelCount.C === 1) {
+    if (!foundWinner && reelCount.C === 1 && reelCount.X === 0) {
         if (Object.keys(reelCount).length === 2) {
             credits += wager + wager * 5;
         } else {
