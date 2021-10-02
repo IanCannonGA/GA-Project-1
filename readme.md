@@ -2,13 +2,13 @@
 \
 *"The One-Armed Bandit"*\
 \
-[Screenshot: Imgur Hosting](https://i.imgur.com/YyUxspq.png)\
+![Screenshot: Imgur Hosting](https://i.imgur.com/YyUxspq.png)\
 \
     So-named after the traditional moniker for a slot machine, this game recreates the same action of the basic gambling device—only without any risk to your bank accounts. You make a bet in a game of chance, and just like the real thing, you even pull the lever to get the action going.\
 \
 *1. Technologies Used*\
 \
-[Wireframe: Imgur Hosting](https://i.imgur.com/rhhANqR.jpg)\
+![Wireframe: Imgur Hosting](https://i.imgur.com/rhhANqR.jpg)\
 \
     1.1. HTML: Construction of basic layout, with each element separately ID'd for CSS, including top title line & reset, reels & lever, credit & betting readouts & controls, and payout info image.\
 \
