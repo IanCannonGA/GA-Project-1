@@ -66,8 +66,8 @@ function render() { //Anything that goes on the PAGE goes here instead
 
 function bet1() { // Add 1 Credit wager (to 3 max)
     if (wager < 3 && credits > 0) {
-        credits-1;
-        wager+1;
+        credits--;
+        wager++;
         betSnd.play();
     } else { return };
     render();
@@ -76,8 +76,8 @@ function bet1() { // Add 1 Credit wager (to 3 max)
 function betMax() { // Bet maximum 3 Credits
     if (credits >= 3)
         while (wager < 3) {
-            credits-1;
-            wager+1;
+            credits--;
+            wager++;
             betAll.play();
         }
     render();
@@ -112,11 +112,15 @@ function leverPull() {
 }
 
 function checkReels() {
-    let reelCount = reelArr.reduce(function(total, sym) {
-        total[sym] = total[sym] ? ++total[sym] : 1;
-        return total;
-    }, {});
     let foundWinner = false;
+    console.log(foundWinner);
+    let reelCount = reelArr.reduce(function(total, sym) {
+						console.log(reelArr);
+						total[sym] = total[sym] ? ++total[sym] : 1;
+      console.log(sym);
+      console.log(total)
+						return total;
+    }, {});
     for (let sym in reelCount) {
         if (reelCount[sym] === 3 && reelCount.X === 0) {
             credits += wager + wager * payouts[sym];

@@ -7,8 +7,7 @@
 }
 
 #body {
-    position: relative;
-    top: 0;
+    position: fixed center;
     overflow-y: hidden;
     grid-template-areas: 'main lever';
     background-color: #111111;
@@ -30,11 +29,12 @@
     font-size: 150%;
     font-weight: bold;
     text-align: center;
-    margin-top: 2%;
+    margin-top: 1.5%;
     margin-left: 17%;
     color: whitesmoke;
     background: grey;
     border: 2.5px silver ridge;
+    margin-bottom: 1vh;
     width: 66%;
 }
 
@@ -46,7 +46,7 @@
 #r1,
 #r2,
 #r3 {
-    scale: 75%;
+    
     height: 170px;
     width: 130px;
     color: white;
@@ -65,25 +65,27 @@
 #money {
     grid-template-areas: 'credits c-amount wager w-amount';
     text-align: center;
-    border-radius: 2.5%;
+    justify-self: center;
+    border-radius: 0.625rem;
     border: 5px silver inset;
     background: black;
     font-weight: bold;
     color: silver;
-    width: 80%;
-    margin: 0% 0% 5% 10%;
+    width: 92%;
+    padding-top: 1%;
+    
 }
 
-#betting {
-    margin-top: 2.5%;
+#betting {  
+    margin-top: 1vh;  
     grid-template-areas: 'betdown betup';
     justify-content: space-around;
 }
 
 #payouts {
-    scale: 95%;
+    scale: 90%;
     border: 5px silver groove;
-    margin: 0px 0px 10px 0px;
+    justify-self: center;
     color: silver;
 }
 
