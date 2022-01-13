@@ -1,3 +1,5 @@
+		@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
 #body,
 #main,
 #reels,
@@ -7,13 +9,13 @@
 }
 
 #body {
-    position: fixed center;
-    overflow-y: hidden;
-    grid-template-areas: 'main lever';
-    background-color: #111111;
-    font-family: 'Times New Roman';
-    justify-content: center;
-    scale: 80%;
+		position: fixed center;
+		overflow-y: hidden;
+		grid-template-areas: 'main lever';
+		background-color: #111111;
+		font-family: 'Rye', cursive;
+		justify-content: center;
+		scale: 80%;
 }
 
 #main {
@@ -26,16 +28,17 @@
 }
 
 #banner {
-    font-size: 150%;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 1.5%;
-    margin-left: 17%;
-    color: whitesmoke;
-    background: grey;
-    border: 2.5px silver ridge;
-    margin-bottom: 1vh;
-    width: 66%;
+		font-size: 150%;
+		font-weight: bold;
+		text-align: center;
+  padding-top: 1%;
+		margin-top: 1.5%;
+		margin-left: 15%;
+		color: whitesmoke;
+		background: grey;
+		border: 2.5px silver ridge;
+		margin-bottom: 2vh;
+		width: 70%;
 }
 
 #reels {
@@ -72,14 +75,26 @@
     font-weight: bold;
     color: silver;
     width: 92%;
+    margin-top: 1%;
     padding-top: 1%;
     
 }
 
-#betting {  
-    margin-top: 1vh;  
-    grid-template-areas: 'betdown betup';
-    justify-content: space-around;
+#betup {
+  margin-right: 5%;
+}
+
+#betmax {
+  margin-left: 5%;
+}
+
+#betting {
+  width: 90%;
+  position: relative;
+  left: 5%;
+		justify-content: space-between center;
+		margin-top: 2.5vh;  
+		grid-template-areas: 'betdown betup';
 }
 
 #payouts {
@@ -91,10 +106,9 @@
 
 #reset {
     text-align: center;
-    height: 30px;
-    width: 50px;
-    margin: 0px 0px 0px 45%;
-    padding: 0px 0px 5px 0px;
+    height: 40px;
+    width: 60px;
+    margin-left: 45%;
     color: darkred;
     background: black;
 }
