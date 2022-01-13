@@ -76,8 +76,8 @@ function bet1() { // Add 1 Credit wager (to 3 max)
 function betMax() { // Bet maximum 3 Credits
     if (credits >= 3)
         while (wager < 3) {
-            credits--;
-            wager++;
+            credits-1;
+            wager+1;
             betAll.play();
         }
     render();
