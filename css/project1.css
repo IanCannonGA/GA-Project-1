@@ -7,11 +7,12 @@
 }
 
 #body {
+    overflow-y: hidden;
     grid-template-areas: 'main lever';
     background-color: #111111;
     font-family: 'Times New Roman';
     justify-content: center;
-    scale: 60%;
+    scale: 80%;
 }
 
 #main {

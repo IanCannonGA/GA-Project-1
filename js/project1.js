@@ -66,8 +66,8 @@ function render() { //Anything that goes on the PAGE goes here instead
 
 function bet1() { // Add 1 Credit wager (to 3 max)
     if (wager < 3 && credits > 0) {
-        credits--;
-        wager++;
+        credits-1;
+        wager+1;
         betSnd.play();
     } else { return };
     render();
