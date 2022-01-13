@@ -1,7 +1,7 @@
 /*----- constants -----*/
 const vReel = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$1', '$2', '$2', '$2', '$2', '$2', '$2', '$2', '$3', '$3', '$3', '$3', 'L7', 'L7', 'L7', 'GB', 'GB', 'JP'];
 const imgLookup = {
-    X: '<img src="https://i.imgur.com/9eSC34C.png">',
+    X: '<img src="https://i.imgur.com/yyOTW20.png">',
     C: '<img src="https://i.imgur.com/rjTgMxb.png">',
     $1: '<img src="https://i.imgur.com/zZ19C0E.png">',
     $2: '<img src="https://i.imgur.com/BEUePaz.png">',
@@ -30,7 +30,7 @@ const rDisp2 = document.getElementById('r2');
 const rDisp3 = document.getElementById('r3');
 const credDisp = document.getElementById('c-amount');
 const betDisp = document.getElementById('w-amount');
-const rFlash = `${'<img src="https://i.imgur.com/fWpKXye.gif">'}`;
+const rFlash = `${'<img src="https://i.imgur.com/KmxcUzw.gif">'}`;
 const leverCtrl = document.getElementById('lever');
 const betSnd = new Audio('audio/Bet1.mp3');
 const betAll = new Audio('audio/BetMax.mp3');
