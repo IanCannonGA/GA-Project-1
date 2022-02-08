@@ -9,22 +9,21 @@
 }
 
 #body {
-		position: fixed center;
-		overflow-y: hidden;
+		position: relative top;
 		grid-template-areas: 'main lever';
 		background-color: #111111;
-		font-family: 'Rye', cursive;
+		font-family: 'Rye';
 		justify-content: center;
-		scale: 80%;
+		scale: 66%;
+		overflow-y: clip;
 }
 
 #main {
-    margin: 10px 0px;
-    padding: 10px;
-    grid-gap: 5px;
-    grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts' 'reset';
-    border: 5px silver ridge;
-    background-color: darkgreen;
+		grid-gap: 1px;
+		grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts' 'reset';
+		border: 5px silver ridge;
+		background-color: darkgreen;
+  bottom: 20%;  
 }
 
 #banner {
@@ -37,7 +36,7 @@
 		color: whitesmoke;
 		background: grey;
 		border: 2.5px silver ridge;
-		margin-bottom: 2vh;
+		margin-bottom: 1vh;
 		width: 70%;
 }
 
@@ -111,4 +110,5 @@
     margin-left: 45%;
     color: darkred;
     background: black;
+    margin-bottom: 2.5vh;
 }
