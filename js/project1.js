@@ -105,7 +105,7 @@ function leverPull() {
         checkReels();
         wager = 0;
         if (credits === 0) {
-            bannerMsg.innerText = "⦿ Better Luck Next Time! ⦿";
+            bannerMsg.innerText = "⦿ Sorry, Pardner! ⦿";
         }
         render();
     }, 2251);

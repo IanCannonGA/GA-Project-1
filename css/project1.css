@@ -14,41 +14,44 @@
 		background-color: #111111;
 		font-family: 'Rye';
 		justify-content: center;
-		scale: 66%;
-		overflow-y: clip;
 }
 
 #main {
+  margin-top: 5%;
+		height: 850px;
 		grid-gap: 1px;
 		grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts' 'reset';
 		border: 5px silver ridge;
 		background-color: darkgreen;
-  bottom: 20%;  
 }
 
 #banner {
-		font-size: 150%;
+		font-size: 125%;
 		font-weight: bold;
 		text-align: center;
   padding-top: 1%;
 		margin-top: 1.5%;
 		margin-left: 15%;
+  padding-bottom: 0.5%;
 		color: whitesmoke;
 		background: grey;
-		border: 2.5px silver ridge;
-		margin-bottom: 1vh;
-		width: 70%;
+		border: 2.5px silver solid;
+		border-radius: 5rem;
+  position: relative;
+  right: 5%;
+  width: 325px;
+   
 }
 
 #reels {
     grid-template-areas: 'reel1 reel2 reel3';
-    justify-content: space-around
+    justify-content: space-around space-between;
+    padding: 1vh;
 }
 
 #r1,
 #r2,
-#r3 {
-    
+#r3 {    
     height: 170px;
     width: 130px;
     color: white;
@@ -56,8 +59,8 @@
     border: 5px silver inset;
 }
 
-#lever {
-    margin-top: 33%;
+#lever{
+  padding-top: 5vmin;
 }
 
 #lever:active {
@@ -73,31 +76,38 @@
     background: black;
     font-weight: bold;
     color: silver;
-    width: 92%;
-    margin-top: 1%;
-    padding-top: 1%;
-    
+    padding-top: 2%;
+    width: 92%;        
 }
 
-#betup {
+#betup, #betmax {
   margin-right: 5%;
+  width: 175px;
+  justify-content: space-between;
 }
 
-#betmax {
-  margin-left: 5%;
+#betup{
+  margin-right: 2.5%;
 }
+
+#betmax{
+  margin-left: 2.5%;
+}
+
 
 #betting {
   width: 90%;
   position: relative;
   left: 5%;
 		justify-content: space-between center;
-		margin-top: 2.5vh;  
+		margin: 1vh;  
+  padding-right: 2vh;
 		grid-template-areas: 'betdown betup';
 }
 
 #payouts {
-    scale: 90%;
+    height: 420px;
+    width: 400px;
     border: 5px silver groove;
     justify-self: center;
     color: silver;
@@ -107,8 +117,9 @@
     text-align: center;
     height: 40px;
     width: 60px;
-    margin-left: 45%;
+    margin-left: 40%;
     color: darkred;
     background: black;
-    margin-bottom: 2.5vh;
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
 }
