@@ -18,7 +18,7 @@
 
 #main {
   margin-top: 5%;
-		height: 850px;
+		height: 100%;
 		grid-gap: 1px;
 		grid-template-areas: 'banner' 'reels' 'money' 'betting' 'payouts' 'reset';
 		border: 5px silver ridge;
@@ -38,9 +38,9 @@
 		border: 2.5px silver solid;
 		border-radius: 5rem;
   position: relative;
-  right: 5%;
-  width: 325px;
-   
+  right: 10%;
+  width: 90%;
+  
 }
 
 #reels {
@@ -122,4 +122,15 @@
     background: black;
     margin-top: 1vh;
     margin-bottom: 1.5vh;
+}
+
+@media screen and (max-width: 768px) {
+  body{scale: 75%; width: 75%}
+}
+@media screen and (max-width: 480px) {
+  body{scale: 65%; width: 65%; position: sticky top; top:0 auto; left: 0 auto;}
+}
+
+@media screen and (max-width: 480px) {
+  body{scale: 25%; position: top; top:0 auto; left: 0 auto;}
 }
