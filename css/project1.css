@@ -45,8 +45,12 @@
 
 #reels {
     grid-template-areas: 'reel1 reel2 reel3';
-    justify-content: space-around space-between;
     padding: 1vh;
+}
+
+#r2{
+  margin-left: 1vh;
+  margin-right: 1vh;
 }
 
 #r1,
