@@ -42,4 +42,4 @@ _5. Determine outcome:_\
   5.1.2. Add money to the wallet if they won, based on outcome (e.g. C|C|C = Win Wager; $|$|$ = Big Money; 7|7|7 = JACKPOT).\
   5.1.3. Allow player to either continue as desired, or end the game if the wallet is empty.
 
-  5.2 ICEBOX ITEMS: Expand the reels' sizes, and play/win lines to multiple horizontal and even diagonal readings; include increased wagers and payouts)
+  5.2 ICEBOX ITEMS: Expand the reels' sizes to 3x3 array; add play/win lines to multiple horizontal and diagonal readings; include increased wagers and payouts to match)
